@@ -11,7 +11,7 @@ require('expose?all_data!all_data')
 // require('materialize-css/bin/materialize.css')
 // require('materialize-css/bin/materialize.js')
 require('../images/' + name + ".jpg")
-// require('../images/' + name + ".png")
+require('../images/' + name + ".png")
 
 // console.log($('asdasdasd'))
 // console.log($('#template-chart-track'))
