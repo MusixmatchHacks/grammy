@@ -1,4 +1,10 @@
-<template id=disqus> <div id=disqus_thread></div> <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> <a href=http://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a> </template> <script type=text/javascript>(function(){
+<template id="disqus">
+  <div id="disqus_thread"></div>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</template>
+<script type="text/javascript">
+(function(){
   var importDoc = document.currentScript.ownerDocument;
   var Disqus = Object.create(HTMLElement.prototype);
 
@@ -25,4 +31,5 @@
   var gravatar = document.registerElement('disqus-thread', {
     prototype: Disqus
   });
-})();</script>
+})();
+</script>
