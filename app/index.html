@@ -1,0 +1,363 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <script src='scripts/bundle.js'></script>
+  <title>Predicting the Grammies with data</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet" type="text/css">
+
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+  <!-- <link rel="import" href="./disqus-thread.html"> -->
+
+</head>
+
+<body>
+
+  <div class="jumbotron" id="title">
+    <div id="header_cover">
+      <div id="title_text" class="container">
+
+        <div id="logo">
+          <a href="https://www.musixmatch.com/">
+            <img src='./images/mxm_logo_white.png'>
+          </a>
+        </div>
+        <!-- <h1>Lil Wayne and Chief Keef are the most profane musicians</h1> -->
+        <h1>Predicting the Grammies with data</h1>
+        <h3>lorem</h3>
+        <div class='credits'>
+          <p>By
+            <a href='https://twitter.com/neotheoen'>Varun Jewalikar</a> and
+            <a href='https://twitter.com/frcfr'>Federica Fragapane</a> at
+            <a href='https://www.musixmatch.com/'>Musixmatch</a>
+          </p>
+          <p id='date_info'>19<sup>th</sup> January, 2016 (4 min read)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="article">
+    <section class='social first_section'>
+      <a name='subscribe_top'></a>
+      <div class="ssk-sm ssk-group ssk-count" data-url="http://lab.musixmatch.com/grammy_prediction/" data-text="Lil Wayne and Chief Keef at the top" data-via="Musixmatch">
+        <a href="" class="ssk ssk-facebook"></a>
+        <a href="" class="ssk ssk-twitter"></a>
+      </div>
+      <!-- <div class='sign-up center-block'>
+        <div id="mc_embed_signup">
+          <form action="//musixmatch.us12.list-manage.com/subscribe/post?u=4b3001a7018f0f85c4658b0c7&amp;id=222b95fbdf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <h2></h2>
+              <div class="mc-field-group">
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address">
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_4b3001a7018f0f85c4658b0c7_222b95fbdf" tabindex="-1" value="">
+              </div>
+              <div class="clear text-center">
+                <input type="submit" value="Subscribe for updates" name="subscribe" id="mc-embedded-subscribe" class="button">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div> -->
+
+    </section>
+
+    <section class='second_section' data-name='overall'>
+      <p class="">
+        Since 1959 the National Academy of Recording Arts and Sciences has presented a Grammy Award for Song of the Year. Every year 4-5 songs are nominated and the best amongst them is given this award. We wanted to study the trends in the lyrics and music of
+        these songs. As a fun exercise, we used this understanding of the trends to build a computational model which predicts the winner of this year's award. </p>
+
+      <!-- <a href='https://www.musixmatch.com/artist/Dr-Dre'> -->
+      <div id='' class='figure-title text-uppercase above-image'>
+        <p>Song of the year 2016 predictions</p>
+      </div>
+      <div class='row no-gutter image-below'>
+        <img class = 'col-xs-12 col-md-12 image-first' src='images/pimp.jpg'></img>
+        <img class = 'col-xs-12 col-md-6' src='images/pimp.jpg'></img>
+        <img class = 'col-xs-12 col-md-6' src='images/pimp.jpg'></img>
+        <img class = 'col-xs-12 col-md-6' src='images/pimp.jpg'></img>
+        <img class = 'col-xs-12 col-md-6 ' src='images/pimp.jpg'></img>
+      </div>
+
+      <!-- </a> -->
+
+      <p>Combining all the nominees and winners in this category since 1959 gives us a total of 294 (58 winners and 236 nominees - excluding the nominees of 2016) songs. This is not enough data to build such a model and these predictions should be taken with a very big pinch of salt. But the trends studied and insights
+        derived from this process are worth looking at.</p>
+      <p>So, let us take a look at how we did it.</p>
+
+      <!-- <img id='' class='' src='images/overview.jpg'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Data overview</p>
+      </div> -->
+
+      <!-- <p>The lyrics in the dataset were scanned for the frequency of occurrence of each swear word from <a href='https://gist.github.com/MusixmatchHacks/3a4dd893be05093bf277'>this</a> list. The creation of this list was explained <a href='http://lab.musixmatch.com/profanity_genres/#analysis'>previously</a>.</p> -->
+
+      <!-- <h1 class='heading'>
+        <span>The winners and the nominees</span>
+      </h1>
+      <p>Lorem</p>
+
+      <div id='winners_nominees_player'></div>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Winners and nominees</p>
+      </div> -->
+      <!-- <p>This percentage is higher than the frequency of swear words in lyrics in general, as observed in our <a href='http://lab.musixmatch.com/profanity_genres/'>previous study</a>. This is because of the higher concentration of hiphop artists in this dataset as compared to the other one.</p> -->
+    </section>
+    <section data-name='top_artists'>
+      <h1 class='heading'>
+        <span>Trends in lyrics</span>
+      </h1>
+      <h2 class='text-left sub-heading'>Language</h2>
+      <p>Domenico Modugno's "Volare", performed in Italian, is the only foreign language song to ever win this prize. <a class='mxm-link' href='https://www.musixmatch.com/lyrics/Los-Lobos/La-Bamba'>"La Bamba"</a> by Los Lobos, performed in Spanish, is the only other foreign language song to be nominated. All the other songs are either in English or instrumental.</p>
+
+      <h2 class='text-left sub-heading'>Instrumentals</h2>
+      <p>Musixmatch automatically analyses whether a song is intrumental or not. Only 7 instrumental songs have been nominated for Song of the year and of them only one, "Theme of Exodus" by Ernest Gold (1961), has won the prize. <a href='https://open.spotify.com/user/1110993974/playlist/5pReAD2AVjzduYMM0Zgs4G'>This</a> is a playlist of these songs.</p>
+
+      <h2 class='text-left sub-heading'>Word count</h2>
+      <p>The most wordy song (total words and unique words) to win this award is <a class= 'mxm-link' href='https://www.musixmatch.com/lyrics/Johnny-Horton/The-Battle-of-New-Orleans'>"The Battle of New Orleans"</a> by Johnny Horton (553 words). </p>
+
+
+      <h1 class='heading'>
+        <span>Trends in music</span>
+      </h1>
+      <p>Lorem</p>
+      <!-- <a href='https://www.musixmatch.com/artist/Lil-Wayne'><img src='images/overall_top_profane-total.jpg'></a> -->
+
+      <h1 class='heading'>
+        <span>Predicting a winner</span>
+      </h1>
+      <p>Lorem</p>
+      <!-- <a href='https://www.musixmatch.com/artist/Chief-Keef'><img src='images/overall_top_profane.jpg'></a> -->
+
+      <!-- <h1 class='heading'>
+        <span>Heavy Metal </span>
+      </h1>
+      <p>Heavy Metal is the second most profane genre. Korn, Slipknot and Children of Bodom use profanity most frequently.</p>
+      <a href='https://www.musixmatch.com/artist/Korn'><img src='images/top_profane_genres-metal.jpg'></a>
+
+      <h1 class='heading'>
+        <span>Electronic music</span>
+      </h1>
+      <p>Despite being mostly instrumental Electronic artists seem to pack a lot of swear words in their music. Diplo leads the rankings here followed by DeadMau5 and Hardwell. (There was an error earlier where Ryuichi Sakamoto  was #2 in this list but it has been fixed now.)</p>
+      <a href='https://www.musixmatch.com/artist/Diplo'><img src='images/top_profane_genres-electronic.jpg'></a>
+
+      <h1 class='heading'>
+        <span>Rock</span>
+      </h1>
+      <p>There is a marked decrease in the profanity frequency of the rest of the genres as compared to Hip-Hop, Heavy Metal and Electronic. Amongst the rock artists, Green Day and Red Hot Chili Peppers use profanity most frequently. The most used swear words are different for both.</p>
+      <a href='https://www.musixmatch.com/artist/Green-Day'><img src='images/top_profane_genres-rock.jpg'></a>
+
+      <h1 class='heading'>
+        <span>Pop</span>
+      </h1>
+      <p>Pop lyrics are known for their wide appeal and use very few swear words. Amongst the most searched pop artists, Charli XCX uses most profanity followed by Tove Lo and Mark Ronson.</p>
+      <a href='https://www.musixmatch.com/artist/Charli-XCX'><img src='images/top_profane_genres-pop.jpg'></a>
+
+      <h1 class='heading'>
+        <span>Indie Rock</span>
+      </h1>
+      <p>The Neighbourhood is band using most profanity amongst the Indie rockers. They are followed by Modest Mouse and Kings of Leon. The most commonly used swear word is shit followed by fuck.</p>
+      <a href='https://www.musixmatch.com/artist/The-Neighbourhood'><img src='images/top_profane_genres-indie.jpg'></a>
+
+      <h1 class='heading'>
+        <span>Folk</span>
+      </h1>
+      <p>There is a marked decrease in the usage of profanity in Folk and Country as compared to the above genres. Loudon Wainwright III and Joni Mitchell use swear words most frequently.</p>
+      <a href='https://www.musixmatch.com/artist/Loudon-Wainwright-III'><a href='https://www.musixmatch.com/artist/Charli-XCX'><img src='images/top_profane_genres-folk.jpg'></a>
+
+      <h1 class='heading'>
+        <span>Country</span>
+      </h1>
+      <p>Country is the least profane genre amongst the 8 popular genres studied. Justin Moore uses swear words most frequently followed by Eric Church and Miranda Lambert. The most commonly used swear words are ass, coon, shit and bitch.</p>
+      <a href='https://www.musixmatch.com/artist/Justin-Moore'><img src='images/top_profane_genres-country.jpg'></a> -->
+
+      <!-- <img src='images/genres-overall-total.jpg'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Genres studied</p>
+      </div> -->
+
+
+      <!-- <div id='' class='figure-title text-uppercase title-above'>
+        <p>Genres by profanity frequency</p>
+      </div> -->
+
+      <!-- <a href='http://i.imgur.com/PMeh8Hq.jpg'>
+        <div class="comp img-below" id='genre_comparison'>
+          <div class="row no-gutter">
+            <div class='col-xs-12'>
+              <img class='genre center-block' src='images/top_profane_genres.jpg'></img>
+            </div>
+          </div>
+          <div class="row no-gutter">
+            <div class='col-xs-12'>
+              <img class='genre center-block' src='images/top_profane_genres2.jpg'></img>
+            </div>
+          </div>
+          <div class="row no-gutter">
+            <div class='col-xs-12'>
+              <img class='genre center-block' src='images/top_profane_genres3.jpg'></img>
+            </div>
+          </div>
+          <div class="row no-gutter">
+            <div class='col-xs-12'>
+              <img class='genre center-block' src='images/top_profane_genres4.jpg'></img>
+            </div>
+          </div>
+        </div>
+
+      </a> -->
+
+
+
+      <!-- <h3 class='sub_heading'>
+        <span>Hiphop lyrics use most profanity</span>
+      </h3>
+
+      <p>1 in every 47 words in Hiphop lyrics is a swear word. This also means <b>every Hiphop song has 10 profanities on average</b>.</p>
+      <p>The top 3 swear words used are nigga, shit and niggas. But the 'n word' is generally not used in an offensive context in Hiphop. On removing it alongwith its conjugations from the analysis of Hiphop lyrics, 1 in every 74 words is a swear word in
+        Hiphop lyrics. This still means 6 profanities in every song. Even with this reduction hip hop still remains the most profane genre overall.</p>
+      <img src='images/hiphop.jpg'></img>
+
+      <div id='' class='figure-title text-uppercase'>
+        <p>Hiphop - with and without the 'n word'</p>
+      </div>
+
+
+      <h3 class='sub_heading'>
+        <span>Heavy metal and Electronic</span>
+      </h3>
+      <p>Heavy metal lyrics are known for their aggressive and violent imagery. So its no surprise it takes 2<sup>nd</sup> rank here.</p>
+      <p>Even though Electronic music is mostly instrumental but it still ranks third. </p>
+
+      <h3 class='sub_heading'>
+        <span>The least profane</span>
+      </h3>
+
+      <p>Pop, Indie Rock and Rock have comparable profanity frequencies (1 in every 1000 words). For every 4 songs on average for these genres we would find 1 profanity.</p>
+      <p>Folk lyrics have 1 swear word for every 2925 words while for Country lyrics this is 1 for every 4438 words. <b>This also means that for every 22 Folk songs and every 20 Country songs we can find 1 profanity</b>. This is very less compared to Hiphop.
+      </p> -->
+    </section>
+
+    <section class='conclusion'>
+      <h1 class="heading">
+        <span>Conclusion</span>
+      </h1>
+      <p>Lorem</p>
+      <p>Lorem</p>
+      <p> Please <a href='#subscribe_bottom'>subscribe</a> to our mailing list to be notified of new articles.</p>
+      <div id='article_end' class='text-center'>. . .</div>
+    </section>
+    <section class='social first_section'>
+      <a name='subscribe_bottom'></a>
+      <div class="ssk-sm ssk-group ssk-count" data-url="http://lab.musixmatch.com/grammy_prediction/" data-text="Lil Wayne and Chief Keef at the top" data-via="Musixmatch">
+        <a href="" class="ssk ssk-facebook"></a>
+        <a href="" class="ssk ssk-twitter"></a>
+      </div>
+      <div class='sign-up center-block'>
+        <div id="mc_embed_signup">
+          <form action="//musixmatch.us12.list-manage.com/subscribe/post?u=4b3001a7018f0f85c4658b0c7&amp;id=222b95fbdf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <h2></h2>
+              <!-- <div class="indicates-required">
+              <span class="asterisk">*</span> indicates required</div> -->
+              <div class="mc-field-group">
+                <!-- <label for="mce-EMAIL">Email Address
+                <span class="asterisk">*</span>
+              </label> -->
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address">
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_4b3001a7018f0f85c4658b0c7_222b95fbdf" tabindex="-1" value="">
+              </div>
+              <div class="clear text-center">
+                <input type="submit" value="Subscribe for updates" name="subscribe" id="mc-embedded-subscribe" class="button">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <disqus-thread shortname="musixmatchlab"></disqus-thread>
+
+
+  </div>
+
+
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!--<script src='/bower_components/social-share-kit/dist/js/social-share-kit.min.js'></script>-->
+  <!-- endbower -->
+
+  <!-- endbuild -->
+
+
+  <!-- build:js(.) scripts/plugins.js -->
+  <!-- endbuild -->
+
+
+  <!-- build:js scripts/main.js -->
+
+  <!--  <script id="template-chart-track" type="text/x-handlebars-template">
+
+          <div class=''>
+            <div class="backgrnd" style="background-image: url({{big_image}});">
+              <div class="track">
+                    <div class='year text-center'> {{year}} <i class="fa fa-external-link" style='color:white'></i> </div>
+                    <div class="snippet text-center"> "<i>{{snippet}}</i>"</div>
+                    <div class='title text-center'> {{title}}, {{artist}} </div>
+                    <div class='controls text-center'> <span>Play</span> <span>Pause</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </script> -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-64935343-6', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!--<script type="text/javascript">    SocialShareKit.init();  </script>-->
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>
+    (function($) {
+      window.fnames = new Array();
+      window.ftypes = new Array();
+      fnames[0] = 'EMAIL';
+      ftypes[0] = 'email';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,714 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+}
+body, html {
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body {
+  /*padding-top: 20px;*/
+  /*padding-bottom: 20px;*/
+  /*background-color: whitesmoke;*/
+  /*font-family: Karla, sans-serif;*/
+  /*background-color: rgb(235, 240, 241);*/
+  background-color: white;
+  color: black;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+
+.header, .marketing, .footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead hrticeading the same height as the navigation */
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  color: white;
+  box-shadow: none!important;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+#title {
+  background-image: url('../images/header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-color: black;*/
+  padding: 0;
+}
+.jumbotron h1 {
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 100px;
+}
+
+#header_cover{
+  background-color: rgba(45, 45, 45, 0.45);
+  width:100%;
+  height:100%;
+  /*padding: 19px;*/
+}
+#title_text h1 {
+  /*color: white;*/
+  /*font-weight: bolder;*/
+}
+#title_text {}
+.heading_describe {
+  /*width: 80%;*/
+  /*text-align: center;*/
+  margin: 20px auto 0px auto;
+}
+/*.sub_heading_describe {
+  width: 80%;
+  text-align: center;
+  margin: 20px auto 10px auto;
+}*/
+/*.sub_heading_end {
+  width: 80%;
+  text-align: center;
+  margin: 30px auto 50px auto;
+}*/
+
+/*google-chart {
+  height: 100%;
+  width: 100%;
+}*/
+
+section {
+  /*padding: 10px 20px;*/
+  /*margin: 0 0 20px;*/
+  /*font-size: 17.5px;*/
+  /*border-left: 5px solid #eee;*/
+  margin-top: 100px;
+}
+
+/*@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}*/
+
+
+/*#logo{
+  background-image: url('../images/musixmatch_logo.png');
+}*/
+
+#logo {
+  /*text-align: left;*/
+  position: relative;
+  top: 35px;
+}
+#logo img {
+  height: auto;
+  width: auto;
+  max-width: 200px;
+  max-height: 150px;
+}
+.article h1 {
+  margin-bottom: 25px;
+  margin-top: 30px;
+}
+.article h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.article h1, h2, h3 {
+  text-align: center;
+}
+.article {
+  width: 660px;
+  margin: 0 auto;
+  padding: 0px 20px 30px 20px;
+  /*font-size: 20px;*/
+  color: #303030;
+  /*line-height: 25px;*/
+  /*font-size: 1.33em;*/
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 32px;
+  font-size: 1.43em;
+}
+img {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: 1200px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+  /*margin-right: auto;*/
+  /*display: block;*/
+  /*position: relative;*/
+  /*text-align: center;*/
+  /*right: auto;*/
+  /*left:auto;*/
+}
+.word_freq {
+  max-width: 110%;
+  margin-left: -5%;
+}
+section blockquote {
+  border-color: black;
+}
+.title_text {
+  color: black;
+}
+.lyrics {
+  display: inline-block;
+  /*margin-right: 10px;*/
+  margin-top: 30px;
+  width: 45%;
+  /*margin-bottom: 31px;*/
+}
+#left {
+  margin-right: 1%;
+}
+section a, a:hover, a:focus {
+  color: #ff6633;
+}
+
+/*section h1:after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 110%;
+  content: "";
+  width: 90%;
+  height: 2px;
+  background-color: #303030
+}*/
+
+h1.heading {
+  /*height: 100%;*/
+  position: relative;
+  /*display: block;*/
+  /*width: 100%;*/
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+h1.heading span {
+  display: inline-block;
+  /*background-color: rgb(235, 240, 241);*/
+  background-color: white;
+  padding: 0 20px;
+  z-index: 7;
+  position: relative;
+  font-weight: 700;
+  /*letter-spacing: 1.4px;*/
+  /*font-size: 17px;*/
+  /*text-transform: uppercase;*/
+  line-height: 50px;
+}
+.heading:after {
+  display: none;
+  position: absolute;
+  bottom: -24%;
+  content: "";
+  width: 5%;
+  height: 4px;
+  background-color: #303030;
+  margin-left: 47.5%;
+  margin-right: 47.5%;
+  /*background-color: white;*/
+}
+/*h3.sub_heading {
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 15px;
+  font-weight: bolder;
+}
+h3.sub_heading span {
+   display: inline-block;
+   background-color: #fff;
+   padding: 0 20px;
+   z-index: 7;
+   position: relative;
+   font-weight: 700;
+   letter-spacing: 4px;
+   text-transform: uppercase;
+   font-size: 18px;
+   line-height: 80px;
+}*/
+
+/*.sub_heading:after {
+  display: none;
+  position: absolute;
+  bottom: -57%;
+  content: "";
+  width: 2.5%;
+  height: 2px;
+  background-color: #303030;
+  margin-left: 49.25%;
+  margin-right: 49.25%;
+}*/
+
+.social {
+  text-align: center;
+  /*margin-bottom: 10px;*/
+}
+.jumbotron a {
+  color: mistyrose;
+}
+.jumbotron a:hover {
+  color: wheat;
+}
+.intro {
+  /*margin-top: 35px;*/
+}
+
+/*@media screen and (max-width: 479px) and (min-width: 320px) {
+  .article {
+    width: 300px;
+  }
+  img {
+    max-width: 250px;
+  }
+}
+@media screen and (max-width: 319px) {
+  .article {
+    width: 200px;
+  }
+  img {
+    max-width: 150px;
+  }
+}*/
+
+
+/*@media screen and (min-width: 960px) {
+
+  img {
+    max-width: 700px;
+  }
+}*/
+
+.comparison {
+  /*display: inline;*/
+  width: 90%;
+}
+
+/*.insight{
+  margin-left: 5%;
+  margin-right: 5%;
+  font-style: italic;
+  color: rgba(0,0,0,0.6);
+  font-size: 1.34em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}*/
+
+.insight {
+  font-style: italic;
+  font-family: serif;
+  /* color: rgba(0,0,0,.6); */
+  font-size: 1.33em;
+  /*font-family: serif;*/
+  /* margin: 10px 5% 20px; */
+  /* font-weight: 600; */
+  line-height: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 0;
+  margin-right: 5%;
+  border-left: 1px solid black;
+  padding-left: 5%;
+}
+
+/* Responsive: Portrait tablets and up */
+
+@media screen and (max-width: 959px) {
+  .article {
+    width: 90%;
+  }
+  img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  /*.sub_heading:after {
+    bottom: -20%;
+  }*/
+  .heading:after {
+    bottom: -10%;
+  }
+
+  /*#all_artists_genre {
+    width: 100%;
+    /*margin-left: -20%;*/
+  /*}*/
+  /*#title {
+
+    background-repeat: no-repeat;
+    /*background-size: cover;*/
+  /*}*/
+  .small-img {
+    width: 100%;
+  }
+  #all_artists_genre {
+    overflow: auto;
+  }
+  #all_artists_genre > table {
+    table-layout: fixed;
+  }
+  /*h3.sub_heading span{
+    line-height: 25px;
+
+  }*/
+  .article {
+    font-size: 1.42em;
+    line-height: 30px;
+  }
+  h1.heading span{
+    line-height: 40px;
+  }
+.jumbotron p {
+  font-size: 17px;
+}
+}
+@media screen and (min-width: 960px) {
+  .container {
+    max-width: 730px;
+  }
+  .sign-up{
+    width:50% !important;
+  }
+  /* Remove the padding we set earlier */
+  .header, .marketing, .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+    height: 620px;
+  }
+  .jumbotron h1 {
+    font-size: 70px;
+
+  }
+  /*.sub_heading:after {
+    bottom: -60%;
+  }*/
+  .heading:after {
+    bottom: -50%;
+  }
+  img {
+    max-width: 100%;
+    /*margin-left: -23.5%;*/
+  }
+  .small-img {
+    width: 100%;
+    /*margin-left: -5%;*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#date_info {
+  font-size: .8em;
+  /*margin-bottom: 5px;*/
+  margin-top: .25%;
+}
+.insight_sub_end {
+  margin-bottom: 50px;
+}
+.credits {
+  margin-top: 140px;
+  margin-bottom: 10px;
+}
+#logo img {
+  height: auto;
+  max-width: 100%;
+  margin-left: 0;
+  max-width: 200px;
+  max-height: 150px;
+}
+.first_section {
+  margin-top: 10px;
+}
+.genre {
+  width: 100%;
+}
+.genre img {
+  /*display: ;*/
+  max-width: 100%;
+}
+
+/*.grid-sizer,
+.grid-item {
+  width: 20%;
+}*/
+
+.row.no-gutter {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutter > [class*='col-'] {
+  padding-right: 5px;
+  padding-left: 0;
+}
+.comp {
+  margin-bottom: 30px;
+}
+.comp img {
+  margin: 5px 0px 0px 0px;
+}
+#all_artists_genre {
+  /*overflow: auto;*/
+  font-size: .7em;
+  line-height: 17px;
+  /*width: 100%;*/
+  /*margin-left: -2.5%;*/
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+#all_artists_genre > table {
+  /*table-layout: fixed;*/
+}
+.figure-title {
+  font-size: .8em;
+  letter-spacing: 1.2px;
+  text-align: center;
+  color: #8b8b8b;
+  margin-bottom: 30px;
+  /*font-style: italic;*/
+}
+#rep_artists_title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+#bird {
+  margin-top: 0px;
+}
+
+h1 a{
+  color:rgb(48, 48, 48);
+}
+
+h1 a:hover{
+  color:rgb(48, 48, 48);
+}
+
+#article_end{
+  font-size: 2em;
+}
+
+.sign-up{
+  width:80%;
+}
+
+.second_section{
+  margin-top: 40px;
+}
+
+/*#mce-success-response{
+    color:#303030;
+}*/
+
+.img-below{
+  margin-top: 5px;
+}
+
+.title-above{
+  margin-bottom:0px;
+  margin-top: 30px;
+}
+
+.backgrnd {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 368px;
+  /*background-color: #ffffff;*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  /*padding-left: 10px !important;
+  padding-right: 10px !important;*/
+  /*margin-left: 20px;
+  margin-right: 20px;*/
+  /*border: 2px solid #FFF;*/
+}
+
+.track-link {
+  text-decoration: none;
+  color: white;
+}
+
+.track-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+.track {
+  background-color: rgba(45, 45, 45, 0.71);
+  transition: background-color 0.3s ease;
+  width: 100%;
+  height: 100%;
+  font-size: 36px;
+  position: relative;
+  color: white;
+}
+
+.credits {
+  position: relative;
+  display: inline;
+  top: 30px;
+}
+
+.title {
+  /*text-align: left;*/
+  /*margin-left: 30px;*/
+  font-size: 0.700em;
+  line-height: 117%;
+  margin-bottom: 20px;
+  /*height: 50%;*/
+}
+
+/*.artist {
+  text-align: left;
+  font-size: 0.756em;
+  line-height: 116%;
+  font-weight: 300;
+
+}*/
+
+/*.quote {
+  position: absolute;
+  bottom: 60px;
+  max-height: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}*/
+
+/*quoteBig::before {
+  display: block;
+  content: "\201C";
+
+  position: relative;
+
+  height: .53em;
+
+  color: rgba(255, 255, 255, .8);
+  cursor: text;
+
+  left: 0.35em;
+  font-family: 'PT Serif';
+  font-style: italic;
+
+  font-size: 2.389em;
+  line-height: 133%;
+  text-align: left;
+}*/
+
+.snippet {
+  /*font-size: 25px;*/
+  margin-top: 0;
+  margin-bottom: 20px;
+  /*margin-left: 10px;*/
+  /*margin-left: 0.278em;*/
+  position: relative;
+  /*text-align: left;*/
+  /*margin-left: 35px;*/
+  /*margin-left: 0.972em;*/
+  /*margin-right: 20px;*/
+  /*margin-right: 0.556em;*/
+  font-family: 'PT Serif';
+  font-size: 0.856em;
+  line-height: 132%;
+  /*top: -55px;*/
+  /*line-height:10px;*/
+  /*height:200px;*/
+}
+
+.info {
+  height: 50%;
+  width: 100%;
+}
+
+.year{
+  font-size: 3em;
+  line-height: 116%;
+  margin-bottom: 20px;
+}
+
+.controls{
+  font-size: 0.5em;
+}
+
+.share{
+  color: white;
+}
+
+.above-image{
+  margin-bottom: 5px;
+  margin-top: 40px;
+}
+
+.image-first{
+  margin-top: 0px;
+}
+
+.image-below{
+  margin-top:10px;
+  margin-bottom: 40px;
+}
+
+.sub-heading{
+  color: rgba(0,0,0,0.44)
+}

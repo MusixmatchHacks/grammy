@@ -1,0 +1,38 @@
+#mc_embed_signup {
+  /*background: #fff;*/
+  clear: left;
+  font-family: "Karla", sans-serif !important;
+  font-size: 14px;
+  line-height: 20px;
+  /*font: 14px Helvetica, Arial, sans-serif;*/
+}
+
+#mc_embed_signup .button {
+  /*clear: both;*/
+  background-color: #FE5A35!important;
+}
+
+/*#mc_embed_signup .button:hover {*/
+  /*clear: both;*/
+  /*background-color: #FA2341!important;*/
+/*}*/
+#mce-responses{
+
+}
+
+#mc_embed_signup div.mce_inline_error {
+  background-color: #FE5A35!important;
+}
+
+#mc_embed_signup #mce-success-response {
+  color: #303030;
+}
+
+#mc_embed_signup #mce-error-response{
+  color: #303030;
+}
+
+#mc_embed_signup div.response {
+ width:100%;
+ text-align:center;
+}
