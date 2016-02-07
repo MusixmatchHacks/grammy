@@ -30,14 +30,14 @@
         </div>
         <!-- <h1>Lil Wayne and Chief Keef are the most profane musicians</h1> -->
         <h1>Predicting the Grammies with data</h1>
-        <h3>lorem</h3>
+        <h3>Analysing lyrics and music to predict the winner for Song of the Year 2016</h3>
         <div class='credits'>
           <p>By
             <a href='https://twitter.com/neotheoen'>Varun Jewalikar</a> and
             <a href='https://twitter.com/frcfr'>Federica Fragapane</a> at
             <a href='https://www.musixmatch.com/'>Musixmatch</a>
           </p>
-          <p id='date_info'>19<sup>th</sup> January, 2016 (4 min read)</p>
+          <p id='date_info'>10<sup>th</sup> February, 2016 (6 min read)</p>
         </div>
       </div>
     </div>
@@ -92,9 +92,7 @@
       </div>
 
       <!-- </a> -->
-
-      <p>Combining all the nominees and winners in this category since 1959 gives us a total of 294 (58 winners and 236 nominees - excluding the nominees of 2016) songs. This is not enough data to build such a model and these predictions should be taken with a very big pinch of salt. But the trends studied and insights
-        derived from this process are worth looking at.</p>
+      <!-- <p>Eventhough this is an interesting analysis but the prediction won't be accurate since there is not enough data and there are many factors which can't be modeled. </p> -->
       <p>So, let us take a look at how we did it.</p>
 
       <!-- <img id='' class='' src='images/overview.jpg'>
@@ -120,25 +118,111 @@
         <span>Trends in lyrics</span>
       </h1>
       <h2 class='text-left sub-heading'>Language</h2>
-      <p>Domenico Modugno's "Volare", performed in Italian, is the only foreign language song to ever win this prize. <a class='mxm-link' href='https://www.musixmatch.com/lyrics/Los-Lobos/La-Bamba'>"La Bamba"</a> by Los Lobos, performed in Spanish, is the only other foreign language song to be nominated. All the other songs are either in English or instrumental.</p>
+      <p><a class='mxm-link' href='https://www.musixmatch.com/lyrics/Domenico-Modugno/Volare'>Volare by Domenico Modugno</a>, performed in Italian, is the only foreign language song to ever win this prize. <a class='mxm-link' href='https://www.musixmatch.com/lyrics/Los-Lobos/La-Bamba'>La Bamba by Los Lobos</a> , performed in Spanish, is the only other foreign language song to be nominated. All the other songs are either in English or instrumental.</p>
 
       <h2 class='text-left sub-heading'>Instrumentals</h2>
-      <p>Musixmatch automatically analyses whether a song is intrumental or not. Only 7 instrumental songs have been nominated for Song of the year and of them only one, "Theme of Exodus" by Ernest Gold (1961), has won the prize. <a href='https://open.spotify.com/user/1110993974/playlist/5pReAD2AVjzduYMM0Zgs4G'>This</a> is a playlist of these songs.</p>
+      <p><a href='https://www.musixmatch.com/'>Musixmatch</a> automatically analyses whether a song is instrumental or not. Only 6 instrumental songs have been nominated for Song of the year and of them only one, Theme of Exodus by Ernest Gold (1961), has won the award.</p>
+      <div id='' class='figure-title text-uppercase above-image-sub'>
+        <p>Instrumental songs</p>
+      </div>
+      <div class = 'text-center image-below'><iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3A1110993974%3Aplaylist%3A5pReAD2AVjzduYMM0Zgs4G" width="300" height="380" frameborder="0" allowtransparency="true"></iframe></div>
+
 
       <h2 class='text-left sub-heading'>Word count</h2>
-      <p>The most wordy song (total words and unique words) to win this award is <a class= 'mxm-link' href='https://www.musixmatch.com/lyrics/Johnny-Horton/The-Battle-of-New-Orleans'>"The Battle of New Orleans"</a> by Johnny Horton (553 words). </p>
+      <p>The wordiest song (total words and unique words) to win this award is <a class= 'mxm-link' href='https://www.musixmatch.com/lyrics/Johnny-Horton/The-Battle-of-New-Orleans'>The Battle of New Orleans by Johnny Horton</a>. The wordiest nominee is <a class='mxm-link' href='https://www.musixmatch.com/lyrics/Meat-Loaf/I-d-Do-Anything-for-Love-but-I-Won-t-Do-That'>I'd Do Anything by Meatloaf</a> but if we count unique words <a class='mxm-link' href='https://www.musixmatch.com/lyrics/Eminem/Lose-Yourself'>Lose Yourself by Eminem</a>  comes out on the top.</p>
+      <img id='' class='' src='images/chart1.png'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Total word count</p>
+      </div>
+      <p>The total word count rises by almost 4 words every year. </p>
 
+      <img id='' class='' src='images/chart2.png'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Unique word count</p>
+      </div>
+      <p>The unique word count rises by almost 1 word every year. </p>
+
+      <h2 class='text-left sub-heading'>Profanity</h2>
+      <p><a class='mxm-link' href='https://www.musixmatch.com/lyrics/Adele/Rolling-In-The-Deep'>Rolling in the deep by Adele</a> is the only song with a profanity (shit) to win this award. 17 of the nominated songs contain profanity.</p>
+      <div id='' class='figure-title text-uppercase above-image-sub'>
+        <p>Songs containing profanity</p>
+      </div>
+      <div class = 'text-center image-below'><iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3A1110993974%3Aplaylist%3A2kjiqtq8rIouBQIuW1xN8G" width="300" height="380" frameborder="0" allowtransparency="true"></iframe></div>
+
+      <h2 class='text-left sub-heading'>Deep learning lyrics model</h2>
+      <p>We trained a deep learning model (Doc2Vec by Google) using 150k lyrics. This model automatically infers the semantics in pieces of text and places the text in an n-dimensional space (n = 100 in our case), such that texts which are similar are located closer (a very simplified/naive explanation of the complex mathematics going on in the background).
+        We used this model to calculate 100 more lyrics metrics (apart from the ones above) for training the award prediction model. It is difficult explain which characteristic of the text corresponds to each of these metrics but a more detailed explanation can be found <a href='http://arxiv.org/pdf/1405.4053v2.pdf'>here</a>. </p>
 
       <h1 class='heading'>
         <span>Trends in music</span>
       </h1>
-      <p>Lorem</p>
+      <p>Echonest, a music intelligence platform, provides a bunch of interesting metrics calculated from the audio of a song. We scanned the 295 songs studied here in the Echonest database and here are some of the interesting musical trends.</p>
+
+      <h2 class='text-left sub-heading'>Duration in seconds</h2>
+      <p> <a class='mxm-link' href='https://www.musixmatch.com/lyrics/U-S-A-for-Africa/We-Are-the-World'>We Are the World by USA for Africa</a> is the longest song (427 seconds) to win the award. <a class='mxm-link' href='https://www.musixmatch.com/lyrics/Meat-Loaf/I-d-Do-Anything-for-Love-but-I-Won-t-Do-That'>I'd Do Anything by Meatloaf</a> is the longest song (721 seconds) to be nominated, it is also the song with the highest word count.</p>
+
+      <img id='' class='' src='images/chart3.png'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Duration in seconds</p>
+      </div>
+      <p>We see a steady rise in the duration till the mid 90s and then a decline. This could perhaps be due to the increase in Hiphop/Dance songs (shorter than Rock/other genres) getting nominated. If we overlay the duration trend with the total word count trend this becomes even clearer with the.</p>
       <!-- <a href='https://www.musixmatch.com/artist/Lil-Wayne'><img src='images/overall_top_profane-total.jpg'></a> -->
+      <img id='' class='' src='images/chart4.png'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Duration and total word count trend</p>
+      </div>
+
+      <h2 class='text-left sub-heading'>Key</h2>
+      <blockquote>In music theory, the key of a piece is the tonic note and chord that provides a subjective sense of arrival and rest. Other notes and chords in the piece create varying degrees of tension, resolved when the tonic note or chord returns - <a href='https://en.wikipedia.org/wiki/Key_(music)'>Wikipedia</a></blockquote>
+      <p>Majority of popular music has a well defined key and all the songs studied here as well.</p>
+
+
+      <img id=''  src='images/chart5.png'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Winners</p>
+      </div>
+      <p>A major is the key most used by the winners followed by D major and C major.</p>
+
+      <img id='' class = '' src='images/chart6.png'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Nominees</p>
+      </div>
+      <p>C major is used most by the nominees followed by G major and A major.</p>
+
+      <h2 class='text-left sub-heading'>Loudness</h2>
+      <blockquote>Echonest averages loudness across the whole song and returns a negative number with 0 being the loudest level possible.</blockquote>
+      <p>The loudest song to win this award is <a class='mxm-link' href='https://open.spotify.com/track/4osg3vT6sXv6wNxm9Z6ucQ'>Rehab by Amy Winehouse</a> while the quietest one is <a class='mxm-link' href='https://open.spotify.com/track/4hObp5bmIJ3PP3cKA9K9GY'>Don't Worry Be Happy by Bobby McFerrin</a>. The quietest song overall is <a href='https://open.spotify.com/track/4edgZcFVRnebJ1F46TDnqr'>Feel Like Makin' Love by Roberta Flack</a> while the loudest one overall is also Rehab.</p>
+      <img id='' class = '' src='images/chart7.png'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Loudness</p>
+      </div>
+      <p>Considering the nominees and winners a steady increase in loudness of 0.17 unit/year is observed. This increase is termed by experts as <a href='https://en.wikipedia.org/wiki/Loudness_war'>loudness wars</a>. For the curious readers, there is a very detailed <a href='http://dr.loudness-war.info/'>website</a> dedicated to this.</p>
+
+      <h2 class='text-left sub-heading'>Danceability</h2>
+      <blockquote>Describes how suitable a track is for dancing using a number of musical elements (the more suitable for dancing, the closer to 1.0 the value). The combination of musical elements that best characterize danceability include tempo, rhythm stability, beat strength, and overall regularity - <a href='http://developer.echonest.com/acoustic-attributes.html'>Echonest</a></blockquote>
+      <p>It is an interesting metric even though not decisive in choosing the winner (according to our model as discussed later). The danceability of Song of the year nominees and winners has been rising (.0007 unit/year).</p>
+      <img id='' class = '' src='images/chart8.png'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Danceability</p>
+      </div>
 
       <h1 class='heading'>
         <span>Predicting a winner</span>
       </h1>
-      <p>Lorem</p>
+      <p>We analysed many audio and lyrics metrics (including the ones discussed above) for all the nominees and winners. Then we trained a machine learning model (a random forest classifier<a href='https://en.wikipedia.org/wiki/Random_forest'><sup>1</sup></a>) training with the winners and nominees till 2015. We used this model to make a prediction using the audio and lyrics metrics for the nominees of 2016.</p>
+      <p>Apart from making a prediction the model can also tell us which metrics were decisive in understanding whether a song is a nominee or a winner. Considering all important metrics (71 lyrics metrics and 17 audio metrics), lyrics contributed 4 times as much as music in deciding a winner for Song of the year. This comparison is not fair because there are more lyrics metrics than audio.</p>
+      <!-- <img id='' class = '' src='images/chart9.png'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Importance of metrics in deciding a winner</p>
+      </div> -->
+
+
+      <blockquote>Summing the decisiveness of 17 audio and 17 lyrics metrics, lyrics are twice as important as music in deciding the winner for Song of the Year.</blockquote>
+      <img id='' class = '' src='images/chart10.png'>
+      <div id='' class='figure-title text-uppercase'>
+        <p>Importance of metrics in deciding a winner</p>
+      </div>
+
       <!-- <a href='https://www.musixmatch.com/artist/Chief-Keef'><img src='images/overall_top_profane.jpg'></a> -->
 
       <!-- <h1 class='heading'>
@@ -254,8 +338,8 @@
       <h1 class="heading">
         <span>Conclusion</span>
       </h1>
-      <p>Lorem</p>
-      <p>Lorem</p>
+      <p>Combining all the nominees and winners in this category since 1959 gives us a total of 295 songs (59 winners and 231 nominees - excluding the nominees of 2016). This is not enough data to build an accurate model and also there are many factors which can't be modeled. Thus, these predictions should be taken with a very big pinch of salt.</p>
+      <p>The trends studied give interesting insights and we would explore these in more detail in the future.</p>
       <p> Please <a href='#subscribe_bottom'>subscribe</a> to our mailing list to be notified of new articles.</p>
       <div id='article_end' class='text-center'>. . .</div>
     </section>

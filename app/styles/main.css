@@ -82,9 +82,9 @@ body {
   margin-top: 28px;
 }
 #title {
-  background-image: url('../images/header.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  /*background-image: url('../images/header.jpg');*/
+  /*background-repeat: no-repeat;
+  background-size: cover;*/
   /*background-color: black;*/
   padding: 0;
 }
@@ -711,4 +711,13 @@ h1 a:hover{
 
 .sub-heading{
   color: rgba(0,0,0,0.44)
+}
+
+.playlist{
+  /*height: 200px;*/
+}
+
+.above-image-sub{
+  margin-bottom: 5px;
+  margin-top: 20px;
 }
