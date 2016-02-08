@@ -82,9 +82,9 @@ body {
   margin-top: 28px;
 }
 #title {
-  /*background-image: url('../images/header.jpg');*/
-  /*background-repeat: no-repeat;
-  background-size: cover;*/
+  background-image: url('../images/header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   /*background-color: black;*/
   padding: 0;
 }
