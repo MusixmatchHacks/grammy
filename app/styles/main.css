@@ -567,7 +567,7 @@ h1 a:hover{
   margin-top: 30px;
 }
 
-.backgrnd {
+#backgrnd {
   background-repeat: no-repeat;
   background-size: contain;
   height: 368px;
@@ -610,11 +610,16 @@ h1 a:hover{
   display: inline;
   top: 30px;
 }
+#track{
+  background-color: rgba(0,0,0,0);
+  height:300px;
 
-.title {
+  color:black;
+}
+#track-title {
   /*text-align: left;*/
   /*margin-left: 30px;*/
-  font-size: 0.700em;
+  font-size: 1.0em;
   line-height: 117%;
   margin-bottom: 20px;
   /*height: 50%;*/
@@ -656,24 +661,16 @@ h1 a:hover{
   text-align: left;
 }*/
 
-.snippet {
-  /*font-size: 25px;*/
-  margin-top: 0;
+#snippet {
+  margin-top: 40px;
   margin-bottom: 20px;
-  /*margin-left: 10px;*/
-  /*margin-left: 0.278em;*/
+
   position: relative;
-  /*text-align: left;*/
-  /*margin-left: 35px;*/
-  /*margin-left: 0.972em;*/
-  /*margin-right: 20px;*/
-  /*margin-right: 0.556em;*/
+  /*margin-left: 6em;*/
+  /*margin-right: 6em;*/
   font-family: 'PT Serif';
-  font-size: 0.856em;
+  font-size: 1.5em;
   line-height: 132%;
-  /*top: -55px;*/
-  /*line-height:10px;*/
-  /*height:200px;*/
 }
 
 .info {
@@ -681,14 +678,15 @@ h1 a:hover{
   width: 100%;
 }
 
-.year{
-  font-size: 3em;
-  line-height: 116%;
+#year{
+  font-size: 1em;
+  line-height: 95%;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .controls{
-  font-size: 0.5em;
+
 }
 
 .share{
@@ -720,4 +718,30 @@ h1 a:hover{
 .above-image-sub{
   margin-bottom: 5px;
   margin-top: 20px;
+}
+
+#player-icons{
+  color:black;
+  font-size: 1em;
+  /*margin-top: 100px;*/
+}
+
+#player-icons a{
+  color:black;
+}
+
+#player-icons .fa{
+  margin-left: 10px;
+}
+
+#winner {
+  display:none;
+}
+
+.golden{
+  color:#a99755;
+}
+
+#winners_nominees_player{
+  display: none;
 }

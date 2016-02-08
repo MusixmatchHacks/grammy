@@ -3,7 +3,24 @@
 
 <head>
   <meta charset="utf-8">
-  <script src='scripts/bundle.js'></script>
+  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+  <!--<script id="template-chart-track" type="text/x-handlebars-template">
+
+          <div class=''>
+            <div class="backgrnd" style="background-image: url({{big_image}});">
+              <div class="track">
+                    <div class='year text-center'> {{year}} <i class="fa fa-external-link" style='color:white'></i> </div>
+                    <div class="snippet text-center"> "<i>{{snippet}}</i>"</div>
+                    <div class='title text-center'> {{title}}, {{artist}} </div>
+                    <div class='controls text-center'> <span>Play</span> <span>Pause</span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+  </script>-->
+
+
   <title>Predicting the Grammies with data</title>
 
   <meta name="description" content="">
@@ -12,7 +29,7 @@
 
   <link rel="shortcut icon" href="/favicon.ico">
 
-  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+
   <!-- <link rel="import" href="./disqus-thread.html"> -->
 
 </head>
@@ -43,6 +60,7 @@
     </div>
   </div>
   <div class="article">
+
     <section class='social first_section'>
       <a name='subscribe_top'></a>
       <div class="ssk-sm ssk-group ssk-count" data-url="http://lab.musixmatch.com/grammy_prediction/" data-text="Lil Wayne and Chief Keef at the top" data-via="Musixmatch">
@@ -73,8 +91,40 @@
       </div> -->
 
     </section>
+    <section class='second_section' data-name='viz' >
+      <div id='winners_nominees_player'>
+        <!-- <div class='row'> -->
+          <!-- <div id="col-xs-2 backgrnd"></div> -->
+          <div id="track">
+              <div>
 
-    <section class='second_section' data-name='overall'>
+                <div id = 'snippet' class="text-center"> </div>
+
+                <div class='text-center'>
+
+                  <span id = 'track-title'></span>
+
+                </div>
+              </div>
+              <div class='text-center'>
+                <span id = 'year'></span>
+                <span id = 'winner' class="fa fa-trophy golden"></span>
+              </div>
+              <div id = 'player-icons' class='text-center'>
+                <!-- <span class="fa fa-play"></span>
+                <span class="fa fa-pause"></span> -->
+                <span class="fa fa-volume-up"></span>
+                <a id = 'share-link' href='' target=_blank><span class="fa fa-external-link-square"></span></a>
+              </div>
+
+              <audio id='audio-player' autoplay="autoplay"><source src="" type="audio/mpeg">Your browser does not support the audio element.</audio>
+          </div>
+          <div id='' class='figure-title text-uppercase'>
+            <p>Winners and nominees of Grammy Award for Song of the Year</p>
+          </div>
+      </div>
+    </section>
+    <section class='' data-name='overall'>
       <p class="">
         Since 1959 the National Academy of Recording Arts and Sciences has presented a Grammy Award for Song of the Year. Every year 4-5 songs are nominated and the best amongst them is given this award. We wanted to study the trends in the lyrics and music of
         these songs. As a fun exercise, we used this understanding of the trends to build a computational model which predicts the winner of this year's award. </p>
@@ -107,7 +157,7 @@
       </h1>
       <p>Lorem</p>
 
-      <div id='winners_nominees_player'></div>
+
       <div id='' class='figure-title text-uppercase'>
         <p>Winners and nominees</p>
       </div> -->
@@ -223,115 +273,6 @@
         <p>Importance of metrics in deciding a winner</p>
       </div>
 
-      <!-- <a href='https://www.musixmatch.com/artist/Chief-Keef'><img src='images/overall_top_profane.jpg'></a> -->
-
-      <!-- <h1 class='heading'>
-        <span>Heavy Metal </span>
-      </h1>
-      <p>Heavy Metal is the second most profane genre. Korn, Slipknot and Children of Bodom use profanity most frequently.</p>
-      <a href='https://www.musixmatch.com/artist/Korn'><img src='images/top_profane_genres-metal.jpg'></a>
-
-      <h1 class='heading'>
-        <span>Electronic music</span>
-      </h1>
-      <p>Despite being mostly instrumental Electronic artists seem to pack a lot of swear words in their music. Diplo leads the rankings here followed by DeadMau5 and Hardwell. (There was an error earlier where Ryuichi Sakamoto  was #2 in this list but it has been fixed now.)</p>
-      <a href='https://www.musixmatch.com/artist/Diplo'><img src='images/top_profane_genres-electronic.jpg'></a>
-
-      <h1 class='heading'>
-        <span>Rock</span>
-      </h1>
-      <p>There is a marked decrease in the profanity frequency of the rest of the genres as compared to Hip-Hop, Heavy Metal and Electronic. Amongst the rock artists, Green Day and Red Hot Chili Peppers use profanity most frequently. The most used swear words are different for both.</p>
-      <a href='https://www.musixmatch.com/artist/Green-Day'><img src='images/top_profane_genres-rock.jpg'></a>
-
-      <h1 class='heading'>
-        <span>Pop</span>
-      </h1>
-      <p>Pop lyrics are known for their wide appeal and use very few swear words. Amongst the most searched pop artists, Charli XCX uses most profanity followed by Tove Lo and Mark Ronson.</p>
-      <a href='https://www.musixmatch.com/artist/Charli-XCX'><img src='images/top_profane_genres-pop.jpg'></a>
-
-      <h1 class='heading'>
-        <span>Indie Rock</span>
-      </h1>
-      <p>The Neighbourhood is band using most profanity amongst the Indie rockers. They are followed by Modest Mouse and Kings of Leon. The most commonly used swear word is shit followed by fuck.</p>
-      <a href='https://www.musixmatch.com/artist/The-Neighbourhood'><img src='images/top_profane_genres-indie.jpg'></a>
-
-      <h1 class='heading'>
-        <span>Folk</span>
-      </h1>
-      <p>There is a marked decrease in the usage of profanity in Folk and Country as compared to the above genres. Loudon Wainwright III and Joni Mitchell use swear words most frequently.</p>
-      <a href='https://www.musixmatch.com/artist/Loudon-Wainwright-III'><a href='https://www.musixmatch.com/artist/Charli-XCX'><img src='images/top_profane_genres-folk.jpg'></a>
-
-      <h1 class='heading'>
-        <span>Country</span>
-      </h1>
-      <p>Country is the least profane genre amongst the 8 popular genres studied. Justin Moore uses swear words most frequently followed by Eric Church and Miranda Lambert. The most commonly used swear words are ass, coon, shit and bitch.</p>
-      <a href='https://www.musixmatch.com/artist/Justin-Moore'><img src='images/top_profane_genres-country.jpg'></a> -->
-
-      <!-- <img src='images/genres-overall-total.jpg'>
-      <div id='' class='figure-title text-uppercase'>
-        <p>Genres studied</p>
-      </div> -->
-
-
-      <!-- <div id='' class='figure-title text-uppercase title-above'>
-        <p>Genres by profanity frequency</p>
-      </div> -->
-
-      <!-- <a href='http://i.imgur.com/PMeh8Hq.jpg'>
-        <div class="comp img-below" id='genre_comparison'>
-          <div class="row no-gutter">
-            <div class='col-xs-12'>
-              <img class='genre center-block' src='images/top_profane_genres.jpg'></img>
-            </div>
-          </div>
-          <div class="row no-gutter">
-            <div class='col-xs-12'>
-              <img class='genre center-block' src='images/top_profane_genres2.jpg'></img>
-            </div>
-          </div>
-          <div class="row no-gutter">
-            <div class='col-xs-12'>
-              <img class='genre center-block' src='images/top_profane_genres3.jpg'></img>
-            </div>
-          </div>
-          <div class="row no-gutter">
-            <div class='col-xs-12'>
-              <img class='genre center-block' src='images/top_profane_genres4.jpg'></img>
-            </div>
-          </div>
-        </div>
-
-      </a> -->
-
-
-
-      <!-- <h3 class='sub_heading'>
-        <span>Hiphop lyrics use most profanity</span>
-      </h3>
-
-      <p>1 in every 47 words in Hiphop lyrics is a swear word. This also means <b>every Hiphop song has 10 profanities on average</b>.</p>
-      <p>The top 3 swear words used are nigga, shit and niggas. But the 'n word' is generally not used in an offensive context in Hiphop. On removing it alongwith its conjugations from the analysis of Hiphop lyrics, 1 in every 74 words is a swear word in
-        Hiphop lyrics. This still means 6 profanities in every song. Even with this reduction hip hop still remains the most profane genre overall.</p>
-      <img src='images/hiphop.jpg'></img>
-
-      <div id='' class='figure-title text-uppercase'>
-        <p>Hiphop - with and without the 'n word'</p>
-      </div>
-
-
-      <h3 class='sub_heading'>
-        <span>Heavy metal and Electronic</span>
-      </h3>
-      <p>Heavy metal lyrics are known for their aggressive and violent imagery. So its no surprise it takes 2<sup>nd</sup> rank here.</p>
-      <p>Even though Electronic music is mostly instrumental but it still ranks third. </p>
-
-      <h3 class='sub_heading'>
-        <span>The least profane</span>
-      </h3>
-
-      <p>Pop, Indie Rock and Rock have comparable profanity frequencies (1 in every 1000 words). For every 4 songs on average for these genres we would find 1 profanity.</p>
-      <p>Folk lyrics have 1 swear word for every 2925 words while for Country lyrics this is 1 for every 4438 words. <b>This also means that for every 22 Folk songs and every 20 Country songs we can find 1 profanity</b>. This is very less compared to Hiphop.
-      </p> -->
     </section>
 
     <section class='conclusion'>
@@ -385,35 +326,15 @@
 
 
 
-  <!-- build:js(.) scripts/vendor.js -->
-  <!-- bower:js -->
-  <!--<script src='/bower_components/social-share-kit/dist/js/social-share-kit.min.js'></script>-->
-  <!-- endbower -->
 
-  <!-- endbuild -->
+  <script id="template-chart-track" type="text/x-handlebars-template">
 
 
-  <!-- build:js(.) scripts/plugins.js -->
-  <!-- endbuild -->
+  </script>
 
+  <!--<script src='scripts/track_player.js'></script>-->
+  <script src='scripts/bundle.js'></script>
 
-  <!-- build:js scripts/main.js -->
-
-  <!--  <script id="template-chart-track" type="text/x-handlebars-template">
-
-          <div class=''>
-            <div class="backgrnd" style="background-image: url({{big_image}});">
-              <div class="track">
-                    <div class='year text-center'> {{year}} <i class="fa fa-external-link" style='color:white'></i> </div>
-                    <div class="snippet text-center"> "<i>{{snippet}}</i>"</div>
-                    <div class='title text-center'> {{title}}, {{artist}} </div>
-                    <div class='controls text-center'> <span>Play</span> <span>Pause</span> </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-    </script> -->
   <script>
     (function(i, s, o, g, r, a, m) {
       i['GoogleAnalyticsObject'] = r;
