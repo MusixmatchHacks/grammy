@@ -127,7 +127,7 @@
         Since 1959, the National Academy of Recording Arts and Sciences has awarded a Grammy for Song of the Year, choosing from 5 or more nominees each year.
       <!-- The winners and nominees can be found in this <a href='https://en.wikipedia.org/wiki/Grammy_Award_for_Song_of_the_Year'>the wikipedia article</a>. -->
     </p>
-      <blockquote>58 songs have won this award (there was a tie in <a href='https://en.wikipedia.org/wiki/20th_Annual_Grammy_Awards#Award_winners'>1978</a>) and 237 songs have been nominated, a total of 295 songs.</blockquote>
+      <blockquote>58 songs have won this award (there was a tie in <a href='https://en.wikipedia.org/wiki/20th_Annual_Grammy_Awards#Award_winners'>1978</a>) and 237 other songs have been nominee. A total of 295 songs.</blockquote>
       <p>At <a href='https://www.musixmatch.com/'>Musixmatch</a>, we studied the trends in the lyrics and music of these songs.
 
       As a fun exercise, we used these trends to build a computational model which predicts the winner of this year's award. Here are the predictions. </p>
@@ -271,17 +271,26 @@
       <h1 class='heading'>
         <span>Predicting a winner</span>
       </h1>
-      <p>A brief breakdown of the steps involved in making a prediction.</p>
+      <div class = 'text-center' >
+        <img id='' class = '' src='http://i.imgur.com/rqJtDY0.gif'>
+        <div id='' class='figure-title text-uppercase'>
+          <p>Machine learning classifier - <a href='http://www.r2d3.us/visual-intro-to-machine-learning-part-1/'>r2d3.us</a></p>
+        </div>
+    </div>
+
+      <p>We trained a model similar to the above illustration, at each node of the tree a decision is made depending on the value of a lyric or audio metric. A detailed visual introduction to machine learning can be found at <a href='http://www.r2d3.us/visual-intro-to-machine-learning-part-1/'>r2d3</a> (highly recommended).</p>
+      <p>These are the steps involved in making our prediction process.</p>
       <ul>
-        <li>We analyzed lyrics and audio metrics for all the nominees and winners.</li>
-        <li>Using the above metrics for the winners and nominees till 2015, we trained a machine learning classifier (<a href='https://en.wikipedia.org/wiki/Random_forest'>random forest classifier</a>).</li>
-        <li>We input the metrics for the 2016 nominees into this classifier to get the probable winners. Go <a href='#prediction'>here</a> to see the prediction again.</li>
+        <li>Analyse lyrics and audio metrics for all the nominees and winners.</li>
+        <li>Use the above metrics for the winners and nominees till 2015, train a machine learning classifier (<a href='https://en.wikipedia.org/wiki/Random_forest'>random forest classifier</a>).</li>
+        <li>Input the metrics for the 2016 nominees into this classifier to get the probable winners. Go <a href='#prediction'>here</a> to see the predictions again.</li>
       </ul>
       <h1 class='heading'>
         <span>Lyrics more important than music in predicting a winner</span>
       </h1>
-      <p>Apart from making a prediction the above model can also tell us which metrics were decisive in understanding whether a song is a nominee or a winner (feature importances).</p>
-      <p> Considering all important metrics (71 lyrics metrics and 17 audio metrics), lyrics contributed 4 times as much as music in deciding a winner for Song of the year. This comparison is not fair because there are more lyrics metrics than audio.</p>
+      <p>Apart from making a prediction, the above model can also tell us the relative importance of the metrics (feature importances).</p>
+      <p>For example - It can say whether total word count is more important in predicting a winner compared to the unique word count or the key of the song.</p>
+      <!-- <p> Considering all important metrics (71 lyrics metrics and 17 audio metrics), lyrics contributed 4 times as much as music in deciding a winner for Song of the year. This comparison is not fair because there are more lyrics metrics than audio.</p> -->
       <!-- <img id='' class = '' src='images/chart9.png'>
       <div id='' class='figure-title text-uppercase'>
         <p>Importance of metrics in deciding a winner</p>
