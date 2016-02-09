@@ -1,0 +1,22 @@
+{
+  "name": "lab.musixmatch.com",
+  "description": "for social share kit",
+  "main": "index.html",
+  "authors": [
+    "neo01124"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/MusixmatchHacks/grammy",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "social-share-kit": "~1.0.6"
+  }
+}

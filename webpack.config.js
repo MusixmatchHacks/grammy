@@ -4,7 +4,7 @@ module.exports = {
     fs: "empty"
   },
   resolve: {
-    root: [path.resolve(__dirname, 'app'), path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'app/scripts'), path.resolve(__dirname, 'app/styles')],
+    root: [path.resolve(__dirname, 'app'), path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'app/scripts'), path.resolve(__dirname, 'app/styles'), path.resolve(__dirname, 'bower_components')],
     extensions: ['', '.js', '.json', '.coffee'],
     alias: {
       "eventEmitter/EventEmitter": "wolfy87-eventemitter",

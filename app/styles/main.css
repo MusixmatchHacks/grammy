@@ -434,7 +434,7 @@ h3.sub_heading span {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
-    height: 620px;
+    height: 500px;
   }
   .jumbotron h1 {
     font-size: 70px;
@@ -702,6 +702,9 @@ h1 a:hover{
   margin-top: 0px;
 }
 
+.image-other{
+  margin-top: 0px;
+}
 .image-below{
   margin-top:10px;
   margin-bottom: 40px;

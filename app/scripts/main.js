@@ -1,7 +1,12 @@
 require('expose?$!expose?jQuery!jquery');
 require("bootstrap-webpack");
+
 require('main.css');
 require('mailchimp.css');
+
+require("social-share-kit/dist/js/social-share-kit.min.js");
+require("social-share-kit/dist/css/social-share-kit.css");
+SocialShareKit.init();
 
 require("font-awesome-webpack");
 require("index.html")
@@ -12,7 +17,7 @@ require('expose?nominees_winnrs_yr_wise!nominees_winnrs_yr_wise')
 require('expose?all_data!all_data')
 
 require('expose?velocity!velocity-animate')
-require('expose?velocity-ui!../../node_modules/velocity-animate/velocity.ui.js')
+require('expose?velocity-ui!velocity-animate/velocity.ui.js')
 
 require('expose?blast!blast-text')
 require('expose?track_player!track_player')
