@@ -6,7 +6,7 @@ require('mailchimp.css');
 
 require("social-share-kit/dist/js/social-share-kit.min.js");
 require("social-share-kit/dist/css/social-share-kit.css");
-SocialShareKit.init();
+
 
 require("font-awesome-webpack");
 require("index.html")
