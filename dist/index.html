@@ -63,11 +63,12 @@
 
     <section class='social first_section'>
       <a name='subscribe_top'></a>
-      <div class="ssk-sm ssk-group ssk-count" data-url="http://lab.musixmatch.com/grammy/" data-text="Kendrick Lamar should win according to a computational model" data-via="Musixmatch">
+      <div class="ssk-sm ssk-group ssk-count" data-url="http://lab.musixmatch.com/grammy/" data-text="Kendrick Lamar should win" data-via="Musixmatch">
         <a href="" class="ssk ssk-facebook"></a>
         <a href="" class="ssk ssk-twitter"></a>
         <a href="" class="ssk ssk-linkedin"></a>
         <a href="" class="ssk ssk-google-plus"></a>
+        <!-- <a href="http://www.reddit.com/submit?url=http://lab.musixmatch.com/grammy/" class="ssk ssk-reddit"></a> -->
       </div>
       <!-- <div class='sign-up center-block'>
         <div id="mc_embed_signup">
@@ -130,49 +131,13 @@
       <!-- The winners and nominees can be found in this <a href='https://en.wikipedia.org/wiki/Grammy_Award_for_Song_of_the_Year'>the wikipedia article</a>. -->
     </p>
       <blockquote>58 songs have won this award (there was a tie in <a href='https://en.wikipedia.org/wiki/20th_Annual_Grammy_Awards#Award_winners'>1978</a>) and 237 other songs have been nominee. A total of 295 songs.</blockquote>
-      <p>At <a href='https://www.musixmatch.com/'>Musixmatch</a>, we studied the trends in the lyrics and music of these songs.
-
-      As a fun exercise, we used these trends to build a computational model which predicts the winner of this year's award. Here are the predictions. </p>
-
-      <!-- <a href='https://www.musixmatch.com/artist/Dr-Dre'> -->
-      <a name='prediction'></a>
-      <div id='' class='figure-title text-uppercase above-image'>
-        <p>Song of the year 2016 predictions</p>
-      </div>
-      <div class='row no-gutter image-below'>
-        <a class='mxm-link col-xs-12 col-md-12 ' href='https://www.musixmatch.com/lyrics/Kendrick-Lamar/Alright'><img class = 'image-first' src='images/prediction1.jpg'></img></a>
-        <a class='mxm-link col-xs-12 col-md-6' href='https://www.musixmatch.com/lyrics/Little-Big-Town/Girl-Crush'><img class = 'image-other' src='images/prediction2.jpg'></img></a>
-        <a class='mxm-link col-xs-12 col-md-6' href='https://www.musixmatch.com/lyrics/Taylor-Swift/Blank-Space-2'><img class = 'image-other' src='images/prediction3.jpg'></img></a>
-        <a class='mxm-link col-xs-12 col-md-6' href='https://www.musixmatch.com/lyrics/Wiz-Khalifa-feat-Charlie-Puth/See-You-Again'><img class = 'image-other' src='images/prediction4.jpg'></img></a>
-        <a class='mxm-link col-xs-12 col-md-6 ' href='https://www.musixmatch.com/lyrics/Ed-Sheeran/Thinking-Out-Loud'><img class = 'image-other' src='images/prediction5.jpg'></img></a>
-      </div>
-
-      <!-- </a> -->
-      <!-- <p>Eventhough this is an interesting analysis but the prediction won't be accurate since there is not enough data and there are many factors which can't be modeled. </p> -->
-      <p>Let us take a look at the interesting trends in the lyrics and music of these songs first, and then a brief look at how the model for prediction was built.</p>
-
-      <!-- <img id='' class='' src='images/overview.jpg'>
-      <div id='' class='figure-title text-uppercase'>
-        <p>Data overview</p>
-      </div> -->
-
-      <!-- <p>The lyrics in the dataset were scanned for the frequency of occurrence of each swear word from <a href='https://gist.github.com/MusixmatchHacks/3a4dd893be05093bf277'>this</a> list. The creation of this list was explained <a href='http://lab.musixmatch.com/profanity_genres/#analysis'>previously</a>.</p> -->
-
-      <!-- <h1 class='heading'>
-        <span>The winners and the nominees</span>
-      </h1>
-      <p>Lorem</p>
-
-
-      <div id='' class='figure-title text-uppercase'>
-        <p>Winners and nominees</p>
-      </div> -->
-      <!-- <p>This percentage is higher than the frequency of swear words in lyrics in general, as observed in our <a href='http://lab.musixmatch.com/profanity_genres/'>previous study</a>. This is because of the higher concentration of hiphop artists in this dataset as compared to the other one.</p> -->
+      <p>At <a href='https://www.musixmatch.com/'>Musixmatch</a>, we studied the trends in the lyrics and music of these songs. As a fun exercise, we used these trends to build a computational model which predicts <a href='#prediction'>the winner</a> of the Song of the Year for 2016. </p>
     </section>
     <section data-name='top_artists'>
       <h1 class='heading'>
         <span>Trends in lyrics</span>
       </h1>
+      <p>A look at interesting trends in the lyrics of the Grammy Song of the year winners and nominees.</p>
       <h2 class='text-left sub-heading'>Language</h2>
       <p><a class='mxm-link' href='https://www.musixmatch.com/'>Musixmatch</a> automatically analyzes the language of the lyrics of every song in its database. <a class='mxm-link' href='https://www.musixmatch.com/lyrics/Domenico-Modugno/Volare'>Volare by Domenico Modugno</a>, performed in Italian, is the only non English song to ever win this award. <a class='mxm-link' href='https://www.musixmatch.com/lyrics/Los-Lobos/La-Bamba'>La Bamba by Los Lobos</a>, performed in Spanish, is the only other non English song to be nominated. The other songs are mainly in English or instrumental.</p>
 
@@ -214,22 +179,25 @@
       <h1 class='heading'>
         <span>Trends in music</span>
       </h1>
-      <p><a href='http://the.echonest.com/'>Echonest</a>, a music intelligence platform, provides many interesting musical metrics calculated from the audio signal of a song. We scanned the 295 songs studied here in the Echonest database and these are some of the interesting musical trends.</p>
+      <p><a href='http://the.echonest.com/'>Echonest</a>, a music intelligence platform, provides many interesting musical metrics calculated from the audio signal of a song. We scanned the Grammy Song of the Year nominees and winners in the Echonest database and these are some of the interesting musical trends.</p>
 
       <h2 class='text-left sub-heading'>Key</h2>
       <blockquote>In music theory, the key of a piece is the tonic note and chord that provides a subjective sense of arrival and rest. Other notes and chords in the piece create varying degrees of tension, resolved when the tonic note or chord returns - <a href='https://en.wikipedia.org/wiki/Key_(music)'>Wikipedia</a></blockquote>
       <p>Generally, popular music has a well defined key and the songs studied here as well.</p>
 
-
-      <img id=''  src='images/chart5.jpg'>
-      <div id='' class='figure-title text-uppercase'>
-        <p>Winners</p>
+      <div class='text-center'>
+        <img id=''  src='images/chart5.jpg'>
+        <div id='' class='figure-title text-uppercase'>
+          <p>Winners</p>
+        </div>
       </div>
       <blockquote>A major is the key most used by the winners followed by D major, C major and F major.</blockquote>
 
-      <img id='' class = '' src='images/chart6.jpg'>
-      <div id='' class='figure-title text-uppercase'>
-        <p>Nominees</p>
+      <div class='text-center'>
+        <img id='' class = '' src='images/chart6.jpg'>
+        <div id='' class='figure-title text-uppercase'>
+          <p>Nominees</p>
+        </div>
       </div>
       <blockquote>C major is used most by the nominees followed by G major and F major.</blockquote>
 
@@ -270,6 +238,8 @@
       </div>
       <blockquote>The danceability of Song of the Year nominees and winners has been rising (.0007 unit/year).</blockquote>
       <p>This means that the nominees and winners have become more danceable over the years.</p>
+
+      <a name='prediction'></a>
       <h1 class='heading'>
         <span>Predicting a winner</span>
       </h1>
@@ -285,8 +255,21 @@
       <ul>
         <li>Analyse lyrics and audio metrics for all the nominees and winners.</li>
         <li>Use the above metrics for the winners and nominees till 2015, train a machine learning classifier (<a href='https://en.wikipedia.org/wiki/Random_forest'>random forest classifier</a>).</li>
-        <li>Input the metrics for the 2016 nominees into this classifier to get the probable winners. Go <a href='#prediction'>here</a> to see the predictions again.</li>
+        <li>Input the metrics for the 2016 nominees into this classifier to get the probable winners.</li>
       </ul>
+
+
+      <div id='' class='figure-title text-uppercase above-image'>
+        <h3>Predictions - Song of the year 2016 </h3>
+      </div>
+      <div class='row no-gutter image-below'>
+        <a class='mxm-link col-xs-12 col-md-12 ' href='https://www.musixmatch.com/lyrics/Kendrick-Lamar/Alright'><img class = 'image-first' src='images/prediction1.jpg'></img></a>
+        <a class='mxm-link col-xs-12 col-md-6' href='https://www.musixmatch.com/lyrics/Little-Big-Town/Girl-Crush'><img class = 'image-other' src='images/prediction2.jpg'></img></a>
+        <a class='mxm-link col-xs-12 col-md-6' href='https://www.musixmatch.com/lyrics/Taylor-Swift/Blank-Space-2'><img class = 'image-other' src='images/prediction3.jpg'></img></a>
+        <a class='mxm-link col-xs-12 col-md-6' href='https://www.musixmatch.com/lyrics/Wiz-Khalifa-feat-Charlie-Puth/See-You-Again'><img class = 'image-other' src='images/prediction4.jpg'></img></a>
+        <a class='mxm-link col-xs-12 col-md-6 ' href='https://www.musixmatch.com/lyrics/Ed-Sheeran/Thinking-Out-Loud'><img class = 'image-other' src='images/prediction5.jpg'></img></a>
+      </div>
+
       <h1 class='heading'>
         <span>Lyrics more important than music in predicting a winner</span>
       </h1>
@@ -300,10 +283,12 @@
 
 
       <blockquote>Summing the importances of the 17 most important lyrics and audio metrics, lyrics are twice as decisive as music in predicting the winner for Song of the Year.</blockquote>
+      <div class='text-center'>
       <img id='' class = '' src='images/chart9.jpg'>
       <div id='' class='figure-title text-uppercase'>
         <p>Importance in deciding a winner</p>
       </div>
+    </div>
 
     </section>
 
@@ -362,7 +347,7 @@
 
 
   <script id="" type="text/x-handlebars-template">
-  
+
   </script>
 
   <!--<script src='scripts/track_player.js'></script>-->
