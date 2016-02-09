@@ -30,7 +30,7 @@
   <link rel="shortcut icon" href="/favicon.ico">
 
 
-  <!-- <link rel="import" href="./disqus-thread.html"> -->
+  <link rel="import" href="./disqus-thread.html">
 
 </head>
 
@@ -46,8 +46,8 @@
           </a>
         </div>
         <!-- <h1>Lil Wayne and Chief Keef are the most profane musicians</h1> -->
-        <h1>Predicting the Grammies with data</h1>
-        <h3>Analysing lyrics and music to predict the winner for Song of the Year 2016</h3>
+        <h1>Predicting the Grammy with data</h1>
+        <h3>Analysis of lyrics and audio to predict the Song of the Year for 2016</h3>
         <div class='credits'>
           <p>By
             <a href='https://twitter.com/neotheoen'>Varun Jewalikar</a> and
@@ -63,7 +63,7 @@
 
     <section class='social first_section'>
       <a name='subscribe_top'></a>
-      <div class="ssk-sm ssk-group ssk-count" data-url="http://lab.musixmatch.com/grammy_prediction/" data-text="Lil Wayne and Chief Keef at the top" data-via="Musixmatch">
+      <div class="ssk-sm ssk-group ssk-count" data-url="http://lab.musixmatch.com/grammy/" data-text="Kendrick Lamar should win according to a computational model" data-via="Musixmatch">
         <a href="" class="ssk ssk-facebook"></a>
         <a href="" class="ssk ssk-twitter"></a>
       </div>
@@ -91,10 +91,9 @@
       </div> -->
 
     </section>
-    <section class='second_section' data-name='viz' >
+
+    <!-- <section class='' data-name='viz' >
       <div id='winners_nominees_player'>
-        <!-- <div class='row'> -->
-          <!-- <div id="col-xs-2 backgrnd"></div> -->
           <div id="track">
               <div>
 
@@ -111,8 +110,6 @@
                 <span id = 'winner' class="fa fa-trophy golden"></span>
               </div>
               <div id = 'player-icons' class='text-center'>
-                <!-- <span class="fa fa-play"></span>
-                <span class="fa fa-pause"></span> -->
                 <span class="fa fa-volume-up"></span>
                 <a id = 'share-link' href='' target=_blank><span class="fa fa-external-link-square"></span></a>
               </div>
@@ -123,27 +120,28 @@
             <p>Winners and nominees of Grammy Award for Song of the Year</p>
           </div>
       </div>
-    </section>
-    <section class='' data-name='overall'>
+    </section> -->
+
+    <section class='second_section' data-name='overall'>
       <p class="">
-        Since 1959 the National Academy of Recording Arts and Sciences has presented a Grammy Award for Song of the Year. Every year 4-5 songs are nominated and the best amongst them is given this award. We wanted to study the trends in the lyrics and music of
-        these songs. As a fun exercise, we used this understanding of the trends to build a computational model which predicts the winner of this year's award. </p>
+        Since 1959 the National Academy of Recording Arts and Sciences has presented a Grammy Award for Song of the Year. Every year 4-5 songs are nominated and the best amongst them is given this award.
+      </p><p>We study the trends in the lyrics and music of these songs. As a fun exercise, we used these trends to build a computational model which predicts the winner of this year's award. </p>
 
       <!-- <a href='https://www.musixmatch.com/artist/Dr-Dre'> -->
       <div id='' class='figure-title text-uppercase above-image'>
         <p>Song of the year 2016 predictions</p>
       </div>
       <div class='row no-gutter image-below'>
-        <img class = 'col-xs-12 col-md-12 image-first' src='images/prediction1.jpg'></img>
-        <img class = 'col-xs-12 col-md-6' src='images/prediction2.jpg'></img>
-        <img class = 'col-xs-12 col-md-6' src='images/prediction3.jpg'></img>
-        <img class = 'col-xs-12 col-md-6' src='images/prediction4.jpg'></img>
-        <img class = 'col-xs-12 col-md-6 ' src='images/prediction5.jpg'></img>
+        <a class='mxm-link col-xs-12 col-md-12 ' href='https://www.musixmatch.com/lyrics/Kendrick-Lamar/Alright'><img class = 'image-first' src='images/prediction1.jpg'></img></a>
+        <a class='mxm-link col-xs-12 col-md-6' href='https://www.musixmatch.com/lyrics/Little-Big-Town/Girl-Crush'><img class = 'image-other' src='images/prediction2.jpg'></img></a>
+        <a class='mxm-link col-xs-12 col-md-6' href='https://www.musixmatch.com/lyrics/Taylor-Swift/Blank-Space-2'><img class = 'image-other' src='images/prediction3.jpg'></img></a>
+        <a class='mxm-link col-xs-12 col-md-6' href='https://www.musixmatch.com/lyrics/Wiz-Khalifa-feat-Charlie-Puth/See-You-Again'><img class = 'image-other' src='images/prediction4.jpg'></img></a>
+        <a class='mxm-link col-xs-12 col-md-6 ' href='https://www.musixmatch.com/lyrics/Ed-Sheeran/Thinking-Out-Loud'><img class = 'image-other' src='images/prediction5.jpg'></img></a>
       </div>
 
       <!-- </a> -->
       <!-- <p>Eventhough this is an interesting analysis but the prediction won't be accurate since there is not enough data and there are many factors which can't be modeled. </p> -->
-      <p>So, let us take a look at how we did it.</p>
+      <p>Let us take a look at how we did it.</p>
 
       <!-- <img id='' class='' src='images/overview.jpg'>
       <div id='' class='figure-title text-uppercase'>
@@ -199,9 +197,9 @@
       </div>
       <div class = 'text-center image-below'><iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3A1110993974%3Aplaylist%3A2kjiqtq8rIouBQIuW1xN8G" width="300" height="380" frameborder="0" allowtransparency="true"></iframe></div>
 
-      <h2 class='text-left sub-heading'>Deep learning lyrics model</h2>
+      <h2 class='text-left sub-heading'>Deep learning model of lyrics</h2>
       <p>We trained a deep learning model (Doc2Vec by Google) using 150k lyrics. This model automatically infers the semantics in pieces of text and places the text in an n-dimensional space (n = 100 in our case), such that texts which are similar are located closer (a very simplified/naive explanation of the complex mathematics going on in the background).
-        We used this model to calculate 100 more lyrics metrics (apart from the ones above) for training the award prediction model. It is difficult explain which characteristic of the text corresponds to each of these metrics but a more detailed explanation can be found <a href='http://arxiv.org/pdf/1405.4053v2.pdf'>here</a>. </p>
+      </p><p>We used this model to calculate 100 more lyrics metrics (apart from the ones above) for training the award prediction model. It is difficult explain which characteristic of the text corresponds to each of these metrics but a more detailed explanation can be found <a href='http://arxiv.org/pdf/1405.4053v2.pdf'>here</a>. </p>
 
       <h1 class='heading'>
         <span>Trends in music</span>
@@ -279,14 +277,14 @@
       <h1 class="heading">
         <span>Conclusion</span>
       </h1>
-      <p>Combining all the nominees and winners in this category since 1959 gives us a total of 295 songs (59 winners and 231 nominees - excluding the nominees of 2016). This is not enough data to build an accurate model and also there are many factors which can't be modeled. Thus, these predictions should be taken with a very big pinch of salt.</p>
-      <p>The trends studied give interesting insights and we would explore these in more detail in the future.</p>
-      <p> Please <a href='#subscribe_bottom'>subscribe</a> to our mailing list to be notified of new articles.</p>
+      <p>Combining all the nominees and winners in this category gives us a total of 295 songs (59 winners and 231 nominees - excluding the nominees of 2016). This is not enough data to build an accurate model and also there are many factors which can't be modeled. Thus, these predictions should be taken with a very big pinch of salt.</p>
+      <p>We also observe computationally that both lyrics and music are important in choosing a winner.</p>
+      <p>We will be exploring these trends in more detail in the future. Please <a href='#subscribe_bottom'>subscribe</a> to our mailing list to be notified of new articles.</p>
       <div id='article_end' class='text-center'>. . .</div>
     </section>
     <section class='social first_section'>
       <a name='subscribe_bottom'></a>
-      <div class="ssk-sm ssk-group ssk-count" data-url="http://lab.musixmatch.com/grammy_prediction/" data-text="Lil Wayne and Chief Keef at the top" data-via="Musixmatch">
+      <div class="ssk-sm ssk-group ssk-count" data-url="http://lab.musixmatch.com/grammy/" data-text="Kendrick Lamar should win according to a computational model" data-via="Musixmatch">
         <a href="" class="ssk ssk-facebook"></a>
         <a href="" class="ssk ssk-twitter"></a>
       </div>
