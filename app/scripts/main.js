@@ -8,19 +8,19 @@ require("social-share-kit/dist/js/social-share-kit.min.js");
 require("social-share-kit/dist/css/social-share-kit.css");
 SocialShareKit.init();
 
-require("font-awesome-webpack");
+// require("font-awesome-webpack");
 require("index.html")
 require("disqus-thread.html")
-require('expose?Handlebars!handlebars')
-require('expose?nominees_winnrs_yr_wise!nominees_winnrs_yr_wise')
+// require('expose?Handlebars!handlebars')
+// require('expose?nominees_winnrs_yr_wise!nominees_winnrs_yr_wise')
 // require('expose?winners_yr_wise!winners_yr_wise')
-require('expose?all_data!all_data')
-
-require('expose?velocity!velocity-animate')
-require('expose?velocity-ui!velocity-animate/velocity.ui.js')
-
-require('expose?blast!blast-text')
-require('expose?track_player!track_player')
+// require('expose?all_data!all_data')
+//
+// require('expose?velocity!velocity-animate')
+// require('expose?velocity-ui!velocity-animate/velocity.ui.js')
+//
+// require('expose?blast!blast-text')
+// require('expose?track_player!track_player')
 
 // require('materialize-css/bin/materialize.css')
 // require('materialize-css/bin/materialize.js')
