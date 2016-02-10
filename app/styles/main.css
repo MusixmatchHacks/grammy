@@ -90,7 +90,7 @@ body {
 }
 .jumbotron h1 {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 100px;
 }
 
@@ -394,12 +394,6 @@ h3.sub_heading span {
   .small-img {
     width: 100%;
   }
-  #all_artists_genre {
-    overflow: auto;
-  }
-  #all_artists_genre > table {
-    table-layout: fixed;
-  }
   /*h3.sub_heading span{
     line-height: 25px;
 
@@ -412,7 +406,13 @@ h3.sub_heading span {
     line-height: 40px;
   }
 .jumbotron p {
-  font-size: 17px;
+  font-size: 12px;
+}
+.jumbotron{
+  height:400px;
+}
+#subtitle{
+  display:none
 }
 }
 @media screen and (min-width: 960px) {
@@ -434,7 +434,7 @@ h3.sub_heading span {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
-    height: 500px;
+    height: 520px;
   }
   .jumbotron h1 {
     font-size: 70px;
@@ -460,7 +460,7 @@ h3.sub_heading span {
 #date_info {
   font-size: .8em;
   /*margin-bottom: 5px;*/
-  margin-top: .25%;
+  /*margin-top: .25%;*/
 }
 .insight_sub_end {
   margin-bottom: 50px;
